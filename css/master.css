@@ -5,18 +5,23 @@ body {
     background-color: #ffffff;
 }
 
+.header {
+  background-color: #57a3ea;
+}
+
 .actions-wrapper {
   height: 400px;
 }
 
 .actions {
   display: inline-flex;
+  height: 205px;
 }
 
 
 .actions-icon {
-    width: 120px;
-    height: 120px;
+    width: 86px;
+    height: 86px;
     transition: background 200ms ease-in-out;
     display: block;
     background-color: #efefef;
@@ -26,15 +31,15 @@ body {
 .actions-icon svg {
   color: #d1d1d1;
   fill: #d1d1d1;
+  width: 50px;
+  position: relative;
+  top: -15px;
 }
-
-
-
-
 
 .asdf {
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 50px !important;
 }
 
 p {
@@ -90,6 +95,11 @@ p {
   line-height: 0px;
   _border-color: #efefef #efefef #ffffff #efefef;
   _filter: progid:DXImageTransform.Microsoft.Chroma(color='#efefef');
+ }
+
+ #cr, #cl {
+   position: relative;
+   top: 50px;
  }
 
 
