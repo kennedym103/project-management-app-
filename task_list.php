@@ -9,7 +9,7 @@ if(isset($_POST['delete'])) {
     header('location: task_list.php?msg=Task+Deleted');
     exit;
   } else {
-    header('location: task_list.php?msg=Unable+to+Delet+Task');
+    header('location: task_list.php?msg=Unable+to+Delete+Task');
     exit;
   }
 }
@@ -44,9 +44,9 @@ include 'inc/header.php';
                 <?php
                   foreach (get_task_list() as $item) {
                     echo "<li><a href='task.php?id=" .$item['task_id'] . "'>"  . $item['title'] . "</a>";
-                    echo "<form method='post' action='task_list.php'>\n";
+                    echo "<form method='post' action='task_list.php' onsubmit=\"return confirm('Are you sure you want to delete this task?');\">\n";
                     echo "<input type='hidden' value='" . $item['task_id'] . "' name='delete' />\n";
-                    echo "<input type='submit' class='button button--delete' value='delete' />\n";
+                    echo "<input type='submit' class='button--delete' value='delete' />\n";
                     echo "</form>";
                     echo "</li>";
                   }
